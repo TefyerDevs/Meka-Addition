@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: mektech
+Specification-Vendor: Tefyer
+Specification-Version: 1
+Implementation-Title: MekTech
+Implementation-Version: org.tefyer
+Implementation-Vendor: Tefyer
+Implementation-Timestamp: 2024-01-02T18:35:16-0500
+

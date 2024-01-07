@@ -1,0 +1,15 @@
+Java Launcher: /home/tefyer/.jdks/temurin-17.0.8.1/bin/java
+Arguments: '--task, SRG_TO_MCP, --input, /home/tefyer/.gradle/caches/modules-2/files-2.1/mekanism/Mekanism/1.18.2-10.2.0.459/ec190fa1477469e6139a410c8776ded9a436fa86/Mekanism-1.18.2-10.2.0.459-additions.jar, --output, /home/tefyer/.gradle/caches/forge_gradle/deobf_dependencies/mekanism/Mekanism/1.18.2-10.2.0.459_mapped_official_1.18.2/Mekanism-1.18.2-10.2.0.459_mapped_official_1.18.2-additions.jar, --mcp, /home/tefyer/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.18.2/mapping-1.18.2-mapping.zip, --strip-signatures'
+Classpath:
+ - /home/tefyer/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/installertools/1.3.2/installertools-1.3.2-fatjar.jar
+Working directory: /home/tefyer/Desktop/MekTech/build/_RenameSrg2Mcp_-481698173
+Main class: net.minecraftforge.installertools.ConsoleTool
+====================================
+Task: SRG_TO_MCP
+Input:  /home/tefyer/.gradle/caches/modules-2/files-2.1/mekanism/Mekanism/1.18.2-10.2.0.459/ec190fa1477469e6139a410c8776ded9a436fa86/Mekanism-1.18.2-10.2.0.459-additions.jar
+Output: /home/tefyer/.gradle/caches/forge_gradle/deobf_dependencies/mekanism/Mekanism/1.18.2-10.2.0.459_mapped_official_1.18.2/Mekanism-1.18.2-10.2.0.459_mapped_official_1.18.2-additions.jar
+MCP:    /home/tefyer/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.18.2/mapping-1.18.2-mapping.zip
+Loading MCP Data
+Processing ZIP file
+Stripped Manifest of sha digests
+Process complete
