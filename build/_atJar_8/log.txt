@@ -1,7 +1,0 @@
-Java Launcher: /home/tefyer/.jdks/temurin-17.0.8.1/bin/java
-Arguments: '--inJar, /home/tefyer/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.17/forge-1.18.2-40.2.17-injected.jar, --outJar, /home/tefyer/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.17_mapped_official_1.18.2/forge-1.18.2-40.2.17_mapped_official_1.18.2.jar, --logFile, accesstransform.log, --atFile, /home/tefyer/Desktop/MekTech/build/_atJar_8/parent_at.cfg'
-Classpath:
- - /home/tefyer/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/8.0.7/accesstransformers-8.0.7-fatjar.jar
-Working directory: /home/tefyer/Desktop/MekTech/build/_atJar_8
-Main class: net.minecraftforge.accesstransformer.TransformerProcessor
-====================================

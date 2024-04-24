@@ -71,4 +71,6 @@
 	paintingMachine = "40000"
 	#Base energy storage (Joules). Also defines max output rate.
 	spsPort = "1000000000"
+	#Base energy storage (Joules).
+	dimensionalStabilizer = "40000"
 

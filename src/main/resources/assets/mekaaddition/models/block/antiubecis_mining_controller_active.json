@@ -1,0 +1,8 @@
+{
+  "parent": "mekanism:block/machine_front_led",
+  "textures": {
+    "sides": "mekaaddition:block/antiubecis_mining_casing",
+    "front": "mekaaddition:block/antiubecis_mining_controller",
+    "front_led":  "mekaaddition:block/led/antiubecis_mining_controller_on_led"
+  }
+}
