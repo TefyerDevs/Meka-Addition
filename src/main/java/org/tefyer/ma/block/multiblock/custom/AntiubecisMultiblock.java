@@ -12,11 +12,15 @@ public class AntiubecisMultiblock extends MultiBlock {
         super(p_level, p_pos);
     }
     public boolean checkMultiBlock(){
-
         for(int i =0; i< BLOCKS.size();i++){
-            if(!checkMultiBlockFromInteger(BlockEntityRegistry.ANTIUBECIS_MINING_CASING_BLOCK_ENTITY,i)){
+            if (checkMultiBlockFromInteger(BlockEntityRegistry.ANTIUBECIS_MINING_CONTROLLER_BLOCK_ENTITY,i))
+                continue;
+            else if(checkMultiBlockFromInteger(BlockEntityRegistry.ANTIUBECIS_MINING_CASING_BLOCK_ENTITY,i))
+                continue;
+            else if(checkMultiBlockFromInteger(BlockEntityRegistry.ANTIUBECIS_MINING_GLASS_BLOCK_ENTITY,i))
+                continue;
+            else
                 return false;
-            }
         }
         return true;
     }
