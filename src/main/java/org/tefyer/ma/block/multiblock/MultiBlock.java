@@ -16,7 +16,7 @@ public class MultiBlock extends MultiBlockCache {
         this.m_level = p_level;
         this.m_pos = p_pos;
     }
-    public <T extends BlockEntity> boolean checkMultiBlockFromInteger(RegistryObject<BlockEntityType<T>> blockEntityTypeRegistryObject, int i){
-        return m_level.getBlockEntity(BLOCKS.get(i).getPos(), BLOCKS.get(i).getBlock()).equals((blockEntityTypeRegistryObject.get()));
+    public <T extends BlockEntity> boolean checkMultiBlockFromInteger(RegistryObject<BlockEntityType<T>> blockEntityTypeRegistryObject, int i,Rotation rot){
+        return m_level.getBlockEntity(BLOCKS.get(i).getPos()+p_pos.rotate(rot), BLOCKS.get(i).getBlock()).equals((blockEntityTypeRegistryObject.get()));
     }
 }
