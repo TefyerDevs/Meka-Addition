@@ -13,7 +13,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.tefyer.ma.block.entity.BlockEntityRegistry;
-import org.tefyer.ma.block.multiblock.custom.AntiubecisMultiblock;
+import org.tefyer.ma.block.BlockRegistry;
 
 public class AntiubecisMiningControlerBlockEntity extends BlockEntity {
 
@@ -49,7 +49,7 @@ public class AntiubecisMiningControlerBlockEntity extends BlockEntity {
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
         AntiubecisMultiblock multiblock = new AntiubecisMultiblock(pLevel,pPos);
         if(multiblock.checkMultiBlock()){
-            //saveAdditional();
+            pLevel.setBlock(pPos,BlockRegistry.ANTIUBECIS_MINING_CONTROLLER.get().defaultBlockState().setValue(AntiubecisMiningControler.ACTIVE,true),1);
         }
     }
 

@@ -12,6 +12,8 @@ public class AntiubecisMultiblock extends MultiBlock {
         super(p_level, p_pos);
     }
     public boolean checkMultiBlock(){
+        Rotation rotation = new Rotation(Rotation.NONE);
+        rotation.rotate(BlockRegistry.ANTIUBECIS_MINING_CONTROLLER_BLOCK.get().);
         for(int i =0; i< BLOCKS.size();i++){
             if (checkMultiBlockFromInteger(BlockEntityRegistry.ANTIUBECIS_MINING_CONTROLLER_BLOCK_ENTITY,i))
                 continue;
