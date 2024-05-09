@@ -12,12 +12,15 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.tefyer.ma.block.entity.BlockEntityRegistry;
+import org.tefyer.ma.MekaAddition;
 import org.tefyer.ma.block.BlockRegistry;
+import org.tefyer.ma.block.custom.AntiubecisMiningControler;
+import org.tefyer.ma.block.entity.BlockEntityRegistry;
+import org.tefyer.ma.block.multiblock.custom.AntiubecisMultiblock;
 
 public class AntiubecisMiningControlerBlockEntity extends BlockEntity {
 
-    private final LazyOptional<Boolean> booleanLazyOptional = LazyOptional.empty();
+    public boolean m_isActive;
 
     public AntiubecisMiningControlerBlockEntity(BlockPos pos, BlockState state) {
         super(BlockEntityRegistry.ANTIUBECIS_MINING_CONTROLLER_BLOCK_ENTITY.get(), pos, state);
@@ -26,32 +29,32 @@ public class AntiubecisMiningControlerBlockEntity extends BlockEntity {
 
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        CompoundTag meka_addition_mod_data = nbt.getCompound(MekaAddition.MODID);
+        meka_addition_mod_data.putBoolean("active",this.m_isActive);
     }
 
-    @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        return super.getCapability(cap, side);
-    }
 
     @Override
-    public void invalidateCaps() {
-        super.invalidateCaps();
-        booleanLazyOptional.invalidate();
-    }
-
-    @Override
-    public void load(@NotNull CompoundTag tag) {
-        super.load(tag);
+    public void load(@NotNull CompoundTag nbt) {
+        super.load(nbt);
+        CompoundTag meka_addition_mod_data = nbt.getCompound(MekaAddition.MODID);
+        this.m_isActive = meka_addition_mod_data.getBoolean("active");
+        nbt.getCompound("");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        AntiubecisMultiblock multiblock = new AntiubecisMultiblock(pLevel,pPos);
-        if(multiblock.checkMultiBlock()){
-            pLevel.setBlock(pPos,BlockRegistry.ANTIUBECIS_MINING_CONTROLLER.get().defaultBlockState().setValue(AntiubecisMiningControler.ACTIVE,true),1);
+        if(!pLevel.isClientSide()){
+            AntiubecisMultiblock multiblock = new AntiubecisMultiblock(pPos);
+            if (!multiblock.checkMultiBlock(pState.getValue(AntiubecisMiningControler.FACING),pLevel)) {
+                if(pState.getValue(AntiubecisMiningControler.ACTIVE)){
+                    pLevel.setBlock(pPos,pState.setValue(AntiubecisMiningControler.ACTIVE,false),0);
+                }
+            }
         }
     }
+
 
 
 }

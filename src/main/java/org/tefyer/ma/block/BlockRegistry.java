@@ -23,7 +23,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> ANTIUBECIS_MINING_CASING = registerBlock("antiubecis_mining_casing",
             ()->new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)));
     public static final RegistryObject<Block> ANTIUBECIS_MINING_CONTROLLER = registerBlock("antiubecis_mining_controller",
-            ()->new AntiubecisMiningControler(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)));
+            ()->new AntiubecisMiningControler());
 
     public static final RegistryObject<Block> ANTIUBECIS_MINING_GLASS = registerBlock("antiubecis_mining_glass",
             ()->new GlassBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));
