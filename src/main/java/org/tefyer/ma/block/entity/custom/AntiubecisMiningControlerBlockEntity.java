@@ -45,12 +45,10 @@ public class AntiubecisMiningControlerBlockEntity extends BlockEntity {
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        if(!pLevel.isClientSide()){
-            AntiubecisMultiblock multiblock = new AntiubecisMultiblock(pPos);
-            if (!multiblock.checkMultiBlock(pState.getValue(AntiubecisMiningControler.FACING),pLevel)) {
-                if(pState.getValue(AntiubecisMiningControler.ACTIVE)){
-                    pLevel.setBlock(pPos,pState.setValue(AntiubecisMiningControler.ACTIVE,false),0);
-                }
+        AntiubecisMultiblock multiblock = new AntiubecisMultiblock(pPos);
+        if (!multiblock.checkMultiBlock(pState.getValue(AntiubecisMiningControler.FACING),pLevel)) {
+            if(pState.getValue(AntiubecisMiningControler.ACTIVE)){
+                pLevel.setBlock(pPos,pState.setValue(AntiubecisMiningControler.ACTIVE,false),0);
             }
         }
     }

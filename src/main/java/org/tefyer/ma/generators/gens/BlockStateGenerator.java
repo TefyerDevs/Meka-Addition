@@ -33,6 +33,8 @@ public class BlockStateGenerator extends BlockStateProvider {
         blockWithItem(BlockRegistry.ANTIUBECIS_MINING_CASING);
         blockItemWithRenderLayer(BlockRegistry.ANTIUBECIS_MINING_GLASS,"minecraft:translucent");
 
+        blockWithItem(BlockRegistry.SUPERMINING_ELEMENT);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

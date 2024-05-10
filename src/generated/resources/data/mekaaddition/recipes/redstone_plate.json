@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "mekaaddition:hammer"
+    },
+    "I": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "H",
+    "I",
+    "I"
+  ],
+  "result": {
+    "item": "mekaaddition:redstone_plate"
+  },
+  "show_notification": true
+}

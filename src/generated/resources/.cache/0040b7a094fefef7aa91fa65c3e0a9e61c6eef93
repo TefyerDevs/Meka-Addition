@@ -1,7 +1,10 @@
-// 1.20.1	2024-04-21T12:50:38.603693203	Block States: mekaaddition
+// 1.20.1	2024-05-09T20:37:24.552949941	Block States: mekaaddition
 bd6fcc83ae5c6e6160b975425e4d978998e33af0 assets/mekaaddition/blockstates/antiubecis_mining_casing.json
 ab746b4a7e32d47b1cf7f45fec86390d8ffb5e5d assets/mekaaddition/blockstates/antiubecis_mining_glass.json
+ab4865d1b155ba31c82793062981ad0604a18382 assets/mekaaddition/blockstates/supermining_element.json
 b76731d2238909954f4a33aae41c72f309c6df59 assets/mekaaddition/models/block/antiubecis_mining_casing.json
 f79714ebcfd1c6f5c4c665227d7a179822e50c2d assets/mekaaddition/models/block/antiubecis_mining_glass.json
+e0c951af6da71d16e6836ec600f999f981134298 assets/mekaaddition/models/block/supermining_element.json
 7f64feffcde3781faa8ad25a0a5b0335c3d77dc4 assets/mekaaddition/models/item/antiubecis_mining_casing.json
 469a69bd6be232d58a7269ed2f5eb39d07e36beb assets/mekaaddition/models/item/antiubecis_mining_glass.json
+294ff9709aa390546dbcbf2431f5535c0b019bcd assets/mekaaddition/models/item/supermining_element.json

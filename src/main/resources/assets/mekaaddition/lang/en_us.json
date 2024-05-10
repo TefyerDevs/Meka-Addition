@@ -1,0 +1,12 @@
+{
+  "mekaaddition.plates_tab_name": "MekaAddition: Plates",
+  "mekaaddition.tools_tab_name": "MekaAddition: Tools",
+
+
+
+  "item.mekaaddition.hammer": "Hammer",
+  "item.mekaaddition.redstone_plate": "Redstone Plate",
+  "item.mekaaddition.diamond_plate": "Diamond Plate",
+  "item.mekaaddition.lapis_plate": "Lapis Plate",
+  "item.mekaaddition.iron_plate": "Iron Plate"
+}

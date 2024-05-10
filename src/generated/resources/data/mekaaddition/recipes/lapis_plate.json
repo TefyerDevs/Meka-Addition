@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "mekaaddition:hammer"
+    },
+    "I": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "H",
+    "I",
+    "I"
+  ],
+  "result": {
+    "item": "mekaaddition:lapis_plate"
+  },
+  "show_notification": true
+}

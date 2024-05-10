@@ -1,23 +1,9 @@
 package org.tefyer.ma;
 
-import com.blamejared.crafttweaker.CraftTweakerForge;
 import com.mojang.logging.LogUtils;
-import mekanism.api.MekanismAPI;
-import mekanism.api.MekanismIMC;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.registries.Registries;
+import mekanism.common.registries.MekanismCreativeTabs;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,12 +16,12 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import org.tefyer.ma.block.BlockRegistry;
 import org.tefyer.ma.block.entity.BlockEntityRegistry;
+import org.tefyer.ma.client.ClientSetup;
+import org.tefyer.ma.item.group.CreativeModTabRegistry;
 import org.tefyer.ma.item.ItemRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -59,6 +45,12 @@ public class MekaAddition {
 
         BlockEntityRegistry.register(modEventBus);
 
+        CreativeModTabRegistry.register(modEventBus);
+
+        ClientSetup.init();
+
+        modEventBus.addListener(this::buildCreativeModeTabContents);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -80,7 +72,11 @@ public class MekaAddition {
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-
+    private void buildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTab() == MekanismCreativeTabs.MEKANISM.get()) {
+            ItemRegistry.ITEMS.getEntries().forEach(event::accept);
+        }
+    }
 
     public static ResourceLocation rl(String path) {
         return new ResourceLocation(MekaAddition.MODID, path);

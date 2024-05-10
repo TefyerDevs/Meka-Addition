@@ -1,2 +1,8 @@
-// 1.20.1	2024-04-21T13:11:49.552540599	Item Models: mekaaddition
+// 1.20.1	2024-05-09T18:45:59.853243848	Item Models: mekaaddition
+fdec6eb908d7583fbf569c73a1f006f95c895544 assets/mekaaddition/models/item/diamond_plate.json
 9700dce3e17c67226e6c6902bf31ec92006c6ef9 assets/mekaaddition/models/item/hammer.json
+fdec6eb908d7583fbf569c73a1f006f95c895544 assets/mekaaddition/models/item/iron_plate.json
+fdec6eb908d7583fbf569c73a1f006f95c895544 assets/mekaaddition/models/item/lapis_plate.json
+08ada0dbdc68a24344b2470afb2f5119bd09e5d3 assets/mekaaddition/models/item/rebonic_ingot.json
+43316fce29d9fcc22e208c00ee60a7acc4159123 assets/mekaaddition/models/item/rebonic_raw_ingot.json
+fdec6eb908d7583fbf569c73a1f006f95c895544 assets/mekaaddition/models/item/redstone_plate.json

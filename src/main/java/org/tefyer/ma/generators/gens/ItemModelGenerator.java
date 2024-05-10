@@ -18,6 +18,13 @@ public class ItemModelGenerator extends ItemModelProvider {
     @Override
     protected void registerModels() {
         handheldItem(ItemRegistry.HAMMER);
+        huedItem(ItemRegistry.DIAMOND_PLATE,"plate");
+        huedItem(ItemRegistry.REDSTONE_PLATE,"plate");
+        huedItem(ItemRegistry.LAPIS_PLATE,"plate");
+        huedItem(ItemRegistry.IRON_PLATE,"plate");
+
+        huedItem(ItemRegistry.REBONIC_INGOT,"ingot");
+        huedItem(ItemRegistry.REBONIC_RAW_INGOT,"raw_ingot");
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
@@ -28,6 +35,11 @@ public class ItemModelGenerator extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(MekaAddition.MODID,"item/" + item.getId().getPath()));
+    }
+    private ItemModelBuilder huedItem(RegistryObject<Item> item,String data) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(MekaAddition.MODID,"item/" + data));
     }
 }
 //MekaAddition.MODID

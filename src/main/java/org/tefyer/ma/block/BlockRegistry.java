@@ -27,6 +27,11 @@ public class BlockRegistry {
 
     public static final RegistryObject<Block> ANTIUBECIS_MINING_GLASS = registerBlock("antiubecis_mining_glass",
             ()->new GlassBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));
+    public static final RegistryObject<Block> SUPERMINING_ELEMENT = registerBlock("supermining_element",
+            ()->new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));
+
+    public static final RegistryObject<Block> SUPERMINER = registerBlock("superminer",
+            ()->new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
