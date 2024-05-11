@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "H": {
-      "item": "mekaaddition:hammer"
+      "tag": "mekaaddition:mekaadditionhammer"
     },
     "I": {
-      "item": "minecraft:lapis_lazuli"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "I"
   ],
   "result": {
-    "item": "mekaaddition:lapis_plate"
+    "item": "mekaaddition:rebonic_plate"
   },
   "show_notification": true
 }

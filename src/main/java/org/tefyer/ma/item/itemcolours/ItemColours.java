@@ -15,6 +15,7 @@ public class ItemColours {
         public int getColor(ItemStack stack, int data) {
             return 0xff1c1c;
         }
+
     }
     public static class DIAMOND_CLASS implements ItemColor {
         @Override

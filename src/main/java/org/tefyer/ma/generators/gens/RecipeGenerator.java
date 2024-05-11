@@ -12,8 +12,12 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.RegistryObject;
 import org.tefyer.ma.MekaAddition;
 import org.tefyer.ma.item.ItemRegistry;
+import org.tefyer.ma.item.itemcolours.ItemColours;
+import org.tefyer.ma.utils.TagRegistry;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class RecipeGenerator extends RecipeProvider implements IConditionBuilder {
@@ -23,19 +27,60 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ItemRegistry.HAMMER.get())
-                .pattern(" I ")
-                .pattern(" SI")
-                .pattern("S  ")
-                .define('S',Items.STICK)
-                .define('I',Items.IRON_INGOT)
-                .unlockedBy(getHasName(Items.IRON_INGOT),has(Items.IRON_INGOT))
-                .save(pWriter);
+        for(Map.Entry<String, RegistryObject<Item>> entry : ItemRegistry.ITEM_AUTOGEN.entrySet()){
+            if(Objects.equals(entry.getKey(), "plate")){
+                craftPlate(entry.getValue().get(),Items.DIAMOND,pWriter);
+            }
+        }
 
-        craftPlate(ItemRegistry.DIAMOND_PLATE.get(),Items.DIAMOND,pWriter);
-        craftPlate(ItemRegistry.REDSTONE_PLATE.get(),Items.REDSTONE,pWriter);
-        craftPlate(ItemRegistry.LAPIS_PLATE.get(),Items.LAPIS_LAZULI,pWriter);
-        craftPlate(ItemRegistry.IRON_PLATE.get(),Items.IRON_INGOT,pWriter);
+        for(Map.Entry<String, RegistryObject<Item>> entry : ItemRegistry.HAMMER_AUTOGEN.entrySet()){
+            if(Objects.equals(entry.getKey(), "iron")){
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
+                        .pattern(" I ")
+                        .pattern(" SI")
+                        .pattern("S  ")
+                        .define('S',Items.STICK)
+                        .define('I',Items.IRON_INGOT)
+                        .unlockedBy(getHasName(Items.IRON_INGOT),has(Items.IRON_INGOT))
+                        .save(pWriter);
+            }else if(Objects.equals(entry.getKey(), "diamond")){
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
+                        .pattern(" I ")
+                        .pattern(" SI")
+                        .pattern("S  ")
+                        .define('S',Items.STICK)
+                        .define('I',Items.DIAMOND)
+                        .unlockedBy(getHasName(Items.DIAMOND),has(Items.DIAMOND))
+                        .save(pWriter);
+            }else if(Objects.equals(entry.getKey(), "redstone")){
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
+                        .pattern(" I ")
+                        .pattern(" SI")
+                        .pattern("S  ")
+                        .define('S',Items.STICK)
+                        .define('I',Items.REDSTONE)
+                        .unlockedBy(getHasName(Items.REDSTONE),has(Items.REDSTONE))
+                        .save(pWriter);
+            }else if(Objects.equals(entry.getKey(), "lapis")){
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
+                        .pattern(" I ")
+                        .pattern(" SI")
+                        .pattern("S  ")
+                        .define('S',Items.STICK)
+                        .define('I',Items.LAPIS_LAZULI)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI),has(Items.LAPIS_LAZULI))
+                        .save(pWriter);
+            }else if(Objects.equals(entry.getKey(), "rebonic")){
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
+                        .pattern(" I ")
+                        .pattern(" SI")
+                        .pattern("S  ")
+                        .define('S',Items.STICK)
+                        .define('I',entry.getValue().get())
+                        .unlockedBy(getHasName(entry.getValue().get()),has(entry.getValue().get()))
+                        .save(pWriter);
+            }
+        }
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
@@ -59,7 +104,7 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                 .pattern("H")
                 .pattern("I")
                 .pattern("I")
-                .define('H', ItemRegistry.HAMMER.get())
+                .define('H', TagRegistry.Items.HAMMERS)
                 .define('I', inputItem)
                 .unlockedBy(getHasName(inputItem),has(inputItem))
                 .save(pWriter);

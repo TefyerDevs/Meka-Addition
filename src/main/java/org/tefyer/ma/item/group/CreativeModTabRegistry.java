@@ -1,15 +1,22 @@
 package org.tefyer.ma.item.group;
 
 
+import mekanism.common.registries.MekanismItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.tefyer.ma.MekaAddition;
 import org.tefyer.ma.item.ItemRegistry;
+import org.tefyer.ma.utils.TagRegistry;
+
+import java.util.Map;
 
 public class CreativeModTabRegistry {
     public static final DeferredRegister<CreativeModeTab> CREATIVEMODETAB =
@@ -18,21 +25,22 @@ public class CreativeModTabRegistry {
             CREATIVEMODETAB.register(MekaAddition.MODID+"plates",
                     ()-> CreativeModeTab.builder()
                             .title(Component.translatable(MekaAddition.MODID+".plates_tab_name"))
-                            .icon(()-> new ItemStack(ItemRegistry.IRON_PLATE.get()))
+                            .icon(Items.IRON_INGOT::getDefaultInstance)
                             .displayItems((parameters, output) -> {
-                                output.accept(ItemRegistry.DIAMOND_PLATE.get());
-                                output.accept(ItemRegistry.REDSTONE_PLATE.get());
-                                output.accept(ItemRegistry.LAPIS_PLATE.get());
-                                output.accept(ItemRegistry.IRON_PLATE.get());
+                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>> entry : ItemRegistry.ITEM_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.getFourth().get());
+                                }
                             })
                             .build());
     public static final RegistryObject<CreativeModeTab> tool_tab =
             CREATIVEMODETAB.register(MekaAddition.MODID+"tools",
                     ()-> CreativeModeTab.builder()
                             .title(Component.translatable(MekaAddition.MODID+".tools_tab_name"))
-                            .icon(()-> new ItemStack(ItemRegistry.HAMMER.get()))
+                            .icon(()-> new ItemStack(MekanismItems.CONFIGURATOR))
                             .displayItems((parameters, output) -> {
-                                output.accept(ItemRegistry.HAMMER.get());
+                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>> entry : ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
                             })
                             .build());
 

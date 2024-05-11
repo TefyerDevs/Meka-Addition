@@ -162,12 +162,6 @@
     },
     "done": true
   },
-  "mekaaddition:recipes/tools/redstone_plate": {
-    "criteria": {
-      "has_redstone": "2024-05-09 18:28:55 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/compass": {
     "criteria": {
       "has_redstone": "2024-05-09 18:28:55 -0400"
@@ -193,12 +187,6 @@
     "done": true
   },
   "minecraft:recipes/decorations/jukebox": {
-    "criteria": {
-      "has_diamond": "2024-05-09 18:28:58 -0400"
-    },
-    "done": true
-  },
-  "mekaaddition:recipes/tools/diamond_plate": {
     "criteria": {
       "has_diamond": "2024-05-09 18:28:58 -0400"
     },
@@ -265,12 +253,6 @@
     "done": true
   },
   "minecraft:recipes/building_blocks/lapis_block": {
-    "criteria": {
-      "has_lapis_lazuli": "2024-05-09 18:29:01 -0400"
-    },
-    "done": true
-  },
-  "mekaaddition:recipes/tools/lapis_plate": {
     "criteria": {
       "has_lapis_lazuli": "2024-05-09 18:29:01 -0400"
     },
@@ -409,18 +391,6 @@
     "done": true
   },
   "minecraft:recipes/decorations/smithing_table": {
-    "criteria": {
-      "has_iron_ingot": "2024-05-09 18:29:07 -0400"
-    },
-    "done": true
-  },
-  "mekaaddition:recipes/tools/hammer": {
-    "criteria": {
-      "has_iron_ingot": "2024-05-09 18:29:07 -0400"
-    },
-    "done": true
-  },
-  "mekaaddition:recipes/tools/iron_plate": {
     "criteria": {
       "has_iron_ingot": "2024-05-09 18:29:07 -0400"
     },

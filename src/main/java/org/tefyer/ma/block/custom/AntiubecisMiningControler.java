@@ -31,6 +31,7 @@ import org.tefyer.ma.block.entity.BlockEntityRegistry;
 import org.tefyer.ma.block.entity.custom.AntiubecisMiningControlerBlockEntity;
 import org.tefyer.ma.block.multiblock.custom.AntiubecisMultiblock;
 import org.tefyer.ma.item.ItemRegistry;
+import org.tefyer.ma.utils.TagRegistry;
 
 public class AntiubecisMiningControler extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -101,7 +102,7 @@ public class AntiubecisMiningControler extends BaseEntityBlock {
         //pPlayer.sendSystemMessage(Component.literal("First Test Ran"));
         if(!pLevel.isClientSide()
                 && pInterActionHand == InteractionHand.MAIN_HAND
-                && pPlayer.getItemInHand(pInterActionHand).is(ItemRegistry.HAMMER.get())) {
+                && pPlayer.getItemInHand(pInterActionHand).is(TagRegistry.Items.HAMMERS)) {
             //pPlayer.sendSystemMessage(Component.literal("First Test True"));
             BlockEntity be = pLevel.getBlockEntity(pPos);
             //pPlayer.sendSystemMessage(Component.literal("Second Test Ran"));
