@@ -23,8 +23,8 @@ public class ItemRegistry {
     public static Map<String,RegistryObject<Item>> ITEM_COLOUR_AUTOGEN = new HashMap<String, RegistryObject<Item>>();
     public static Map<String,RegistryObject<Item>> HAMMER_COLOUR_AUTOGEN = new HashMap<String, RegistryObject<Item>>();
 
-    public static List<Tuple<String,String,String,RegistryObject<Item>>> ITEM_ITEMGEN_AUTOGEN = new ArrayList<>();
-    public static List<Tuple<String,String,String,RegistryObject<Item>>> HAMMER_ITEMGEN_AUTOGEN = new ArrayList<>();
+    public static List<Tuple<String,String,String,RegistryObject<Item>,RegistryObject<Item>>> ITEM_ITEMGEN_AUTOGEN = new ArrayList<>();
+    public static List<Tuple<String,String,String,RegistryObject<Item>,RegistryObject<Item>>> HAMMER_ITEMGEN_AUTOGEN = new ArrayList<>();
 
 
 
@@ -53,10 +53,10 @@ public class ItemRegistry {
             ITEM_COLOUR_AUTOGEN.put(ore.getM_identifer(),raw_ingot_item);
             ITEM_COLOUR_AUTOGEN.put(ore.getM_identifer(),ingot_item);
 
-            HAMMER_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_hammer","hammer",ore.getM_identifer(),hammer_item));
-            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_plate","plate",ore.getM_identifer(),plate_item));
-            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_raw_ingot","raw_ingot",ore.getM_identifer(),raw_ingot_item));
-            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_ingot","ingot",ore.getM_identifer(),ingot_item));
+            HAMMER_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_hammer","hammer",ore.getM_identifer(),hammer_item,ingot_item));
+            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_plate","plate",ore.getM_identifer(),plate_item,null));
+            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_raw_ingot","raw_ingot",ore.getM_identifer(),raw_ingot_item,null));
+            ITEM_ITEMGEN_AUTOGEN.add(new Tuple<>(ore.getM_identifer()+"_ingot","ingot",ore.getM_identifer(),ingot_item,null));
 
         }
     }
@@ -65,17 +65,19 @@ public class ItemRegistry {
         makePlates();
         ITEMS.register(bus);
     }
-    public static class Tuple<E, F, G,H> {
+    public static class Tuple<E, F, G,H,N> {
         public E First;
         public F Second;
         public G Third;
         public H Fourth;
+        public N Fifth;
 
-        public Tuple(E first, F second, G third,H fourth) {
+        public Tuple(E first, F second, G third,H fourth,N fifth) {
             First = first;
             Second = second;
             Third = third;
-            this.Fourth = fourth;
+            Fourth = fourth;
+            Fifth = fifth;
         }
 
         public E getFirst() {
@@ -101,11 +103,12 @@ public class ItemRegistry {
         public void setThird(G third) {
             Third = third;
         }
-        public void put(E e, F f, G g,H h){
+        public void put(E e, F f, G g,H h,N n){
             First = e;
             Second = f;
             Third = g;
             Fourth = h;
+            Fifth = n;
         }
 
         public H getFourth() {
@@ -114,6 +117,14 @@ public class ItemRegistry {
 
         public void setFourth(H fourth) {
             Fourth = fourth;
+        }
+
+        public N getFifth() {
+            return Fifth;
+        }
+
+        public void setFifth(N fifth) {
+            Fifth = fifth;
         }
     }
 

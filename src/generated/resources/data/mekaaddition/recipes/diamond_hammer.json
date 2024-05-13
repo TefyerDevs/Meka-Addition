@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "H": {
-      "tag": "mekaaddition:mekaadditionhammer"
-    },
     "I": {
-      "item": "minecraft:diamond"
+      "item": "mekaaddition:diamond_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "H",
-    "I",
-    "I"
+    " I ",
+    " SI",
+    "S  "
   ],
   "result": {
-    "item": "mekaaddition:rebonic_plate"
+    "item": "mekaaddition:diamond_hammer"
   },
   "show_notification": true
 }

@@ -27,7 +27,7 @@ public class CreativeModTabRegistry {
                             .title(Component.translatable(MekaAddition.MODID+".plates_tab_name"))
                             .icon(Items.IRON_INGOT::getDefaultInstance)
                             .displayItems((parameters, output) -> {
-                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>> entry : ItemRegistry.ITEM_ITEMGEN_AUTOGEN){
+                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>, RegistryObject<Item>> entry : ItemRegistry.ITEM_ITEMGEN_AUTOGEN){
                                     output.accept(entry.getFourth().get());
                                 }
                             })
@@ -38,7 +38,7 @@ public class CreativeModTabRegistry {
                             .title(Component.translatable(MekaAddition.MODID+".tools_tab_name"))
                             .icon(()-> new ItemStack(MekanismItems.CONFIGURATOR))
                             .displayItems((parameters, output) -> {
-                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>> entry : ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
+                                for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>, RegistryObject<Item>> entry : ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
                                     output.accept(entry.Fourth.get());
                                 }
                             })

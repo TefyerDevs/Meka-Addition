@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond": {
+    "has_iron_hammer": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond"
+              "mekaaddition:iron_hammer"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mekaaddition:rebonic_plate"
+        "recipe": "mekaaddition:iron_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_diamond",
+      "has_iron_hammer",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mekaaddition:rebonic_plate"
+      "mekaaddition:iron_hammer"
     ]
   },
   "sends_telemetry_event": false

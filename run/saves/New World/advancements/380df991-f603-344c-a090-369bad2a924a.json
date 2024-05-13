@@ -504,5 +504,11 @@
     },
     "done": true
   },
+  "mekaaddition:recipes/tools/diamond_hammer": {
+    "criteria": {
+      "has_diamond_hammer": "2024-05-11 14:21:43 -0400"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

@@ -27,59 +27,21 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        for(Map.Entry<String, RegistryObject<Item>> entry : ItemRegistry.ITEM_AUTOGEN.entrySet()){
-            if(Objects.equals(entry.getKey(), "plate")){
-                craftPlate(entry.getValue().get(),Items.DIAMOND,pWriter);
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>,RegistryObject<Item>> entry: ItemRegistry.ITEM_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "plate")){
+                craftPlate(entry.getFourth().get(),Items.DIAMOND,pWriter);
             }
         }
 
-        for(Map.Entry<String, RegistryObject<Item>> entry : ItemRegistry.HAMMER_AUTOGEN.entrySet()){
-            if(Objects.equals(entry.getKey(), "iron")){
-                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
-                        .pattern(" I ")
-                        .pattern(" SI")
-                        .pattern("S  ")
-                        .define('S',Items.STICK)
-                        .define('I',Items.IRON_INGOT)
-                        .unlockedBy(getHasName(Items.IRON_INGOT),has(Items.IRON_INGOT))
-                        .save(pWriter);
-            }else if(Objects.equals(entry.getKey(), "diamond")){
-                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
-                        .pattern(" I ")
-                        .pattern(" SI")
-                        .pattern("S  ")
-                        .define('S',Items.STICK)
-                        .define('I',Items.DIAMOND)
-                        .unlockedBy(getHasName(Items.DIAMOND),has(Items.DIAMOND))
-                        .save(pWriter);
-            }else if(Objects.equals(entry.getKey(), "redstone")){
-                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
-                        .pattern(" I ")
-                        .pattern(" SI")
-                        .pattern("S  ")
-                        .define('S',Items.STICK)
-                        .define('I',Items.REDSTONE)
-                        .unlockedBy(getHasName(Items.REDSTONE),has(Items.REDSTONE))
-                        .save(pWriter);
-            }else if(Objects.equals(entry.getKey(), "lapis")){
-                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
-                        .pattern(" I ")
-                        .pattern(" SI")
-                        .pattern("S  ")
-                        .define('S',Items.STICK)
-                        .define('I',Items.LAPIS_LAZULI)
-                        .unlockedBy(getHasName(Items.LAPIS_LAZULI),has(Items.LAPIS_LAZULI))
-                        .save(pWriter);
-            }else if(Objects.equals(entry.getKey(), "rebonic")){
-                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getValue().get())
-                        .pattern(" I ")
-                        .pattern(" SI")
-                        .pattern("S  ")
-                        .define('S',Items.STICK)
-                        .define('I',entry.getValue().get())
-                        .unlockedBy(getHasName(entry.getValue().get()),has(entry.getValue().get()))
-                        .save(pWriter);
-            }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>,RegistryObject<Item>> entry: ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern(" I ")
+                    .pattern(" SI")
+                    .pattern("S  ")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
         }
     }
 

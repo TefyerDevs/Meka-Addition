@@ -1,3 +1,11 @@
-// 1.20.1	2024-05-10T18:40:17.962449554	Recipes
-f191d57dedcb56e2839da934b78162c16b9bc309 data/mekaaddition/advancements/recipes/tools/rebonic_plate.json
-fd6af0baa33a50497315447f7edf8d0e757af3c5 data/mekaaddition/recipes/rebonic_plate.json
+// 1.20.1	2024-05-11T14:18:07.295901897	Recipes
+70e7c04f72c6e4d29695cbd4ba43a349633db1d1 data/mekaaddition/advancements/recipes/tools/diamond_hammer.json
+589e8bac6e213a2103517e85d4e2829fed6af08b data/mekaaddition/advancements/recipes/tools/iron_hammer.json
+46fc05a145b80e7a071d592aa5cdb4a63db6ecc6 data/mekaaddition/advancements/recipes/tools/lapis_hammer.json
+85144191d0d43f6f5abaf4f0a81150826aef250a data/mekaaddition/advancements/recipes/tools/rebonic_hammer.json
+56e1953381025f987a47c777479b07730328f6af data/mekaaddition/advancements/recipes/tools/redstone_hammer.json
+4661557c323950a4a1980f6da99a284c2bcbe707 data/mekaaddition/recipes/diamond_hammer.json
+2b5f4d535be9e4168567dfd0838e98400ba2ec20 data/mekaaddition/recipes/iron_hammer.json
+987180abd5e98ee24db68c5725faaddb4b917dae data/mekaaddition/recipes/lapis_hammer.json
+fb9cb5be289b91f29f5e1d18bd25961614d8b4ef data/mekaaddition/recipes/rebonic_hammer.json
+4c21ced207c5e1b7762386d47af4cfa4565b6eef data/mekaaddition/recipes/redstone_hammer.json
