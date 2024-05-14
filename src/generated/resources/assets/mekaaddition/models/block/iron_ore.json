@@ -4,33 +4,27 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         },
         "east": {
           "cullface": "east",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         },
         "north": {
           "cullface": "north",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         },
         "south": {
           "cullface": "south",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         },
         "up": {
           "cullface": "up",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         },
         "west": {
           "cullface": "west",
-          "texture": "mekaaddition:block/ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/ore"
         }
       },
       "from": [

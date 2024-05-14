@@ -4,33 +4,27 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         },
         "east": {
           "cullface": "east",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         },
         "north": {
           "cullface": "north",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         },
         "south": {
           "cullface": "south",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         },
         "up": {
           "cullface": "up",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         },
         "west": {
           "cullface": "west",
-          "texture": "mekaaddition:block/deepslate_ore",
-          "tintindex": 1
+          "texture": "mekaaddition:block/deepslate_ore"
         }
       },
       "from": [

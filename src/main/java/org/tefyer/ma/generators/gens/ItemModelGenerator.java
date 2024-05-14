@@ -64,7 +64,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer1",
                 new ResourceLocation(MekaAddition.MODID,"item/" + data)).texture("layer0",
-                new ResourceLocation(data2));
+                new ResourceLocation(data2)).element().end();
     }
 
 }
