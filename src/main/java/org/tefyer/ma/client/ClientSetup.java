@@ -89,6 +89,113 @@ public class ClientSetup {
                 event.register(ItemColours.REBONIC, entry.getFourth().get());
             }
         }
+
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SAW_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WIRE_CUTTER_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.MOARTER_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WRENCH_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.KNIFE_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SKREW_DRIVER_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.FILE_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SOFT_HAMMER_ITEMGEN_AUTOGEN){
+            if(Objects.equals(entry.getThird(), "iron")){
+                event.register(ItemColours.IRON, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "diamond")){
+                event.register(ItemColours.DIAMOND, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "redstone")){
+                event.register(ItemColours.REDSTONE, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "lapis")){
+                event.register(ItemColours.LAPIS, entry.getFourth().get());
+            }else if(Objects.equals(entry.getThird(), "rebonic")){
+                event.register(ItemColours.REBONIC, entry.getFourth().get());
+            }
+        }
+
+
         /*for(BlockRegistry.Tuple<String,String,RegistryObject<Block>> entry: BlockRegistry.ORE_AUTOGEN){
             System.out.println(entry.First);
             if(Objects.equals(entry.First, "iron")){

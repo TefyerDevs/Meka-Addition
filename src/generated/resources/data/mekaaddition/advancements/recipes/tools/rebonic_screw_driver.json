@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rebonic_screw_driver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekaaddition:rebonic_screw_driver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mekaaddition:rebonic_screw_driver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rebonic_screw_driver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mekaaddition:rebonic_screw_driver"
+    ]
+  },
+  "sends_telemetry_event": false
+}

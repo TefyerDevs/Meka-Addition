@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "mekaaddition:rebonic_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " II",
+    " SI",
+    "S I"
+  ],
+  "result": {
+    "item": "mekaaddition:rebonic_soft_hammer"
+  },
+  "show_notification": true
+}

@@ -31,6 +31,7 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
             if(Objects.equals(entry.getThird(), "plate")){
                 craftPlate(entry.getFourth().get(),Items.DIAMOND,pWriter);
             }
+
         }
 
         for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>,RegistryObject<Item>> entry: ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
@@ -38,6 +39,86 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                     .pattern(" I ")
                     .pattern(" SI")
                     .pattern("S  ")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SAW_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern(" II")
+                    .pattern("SI ")
+                    .pattern("   ")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WIRE_CUTTER_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern("I I")
+                    .pattern("ISI")
+                    .pattern("S S")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.MOARTER_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern(" I ")
+                    .pattern("SIS")
+                    .pattern("SSS")
+                    .define('S',Items.STONE)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WRENCH_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern("ISI")
+                    .pattern("III")
+                    .pattern(" I ")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.KNIFE_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern(" II")
+                    .pattern(" I ")
+                    .pattern("S  ")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SKREW_DRIVER_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern("II ")
+                    .pattern(" SI")
+                    .pattern("S I")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.FILE_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern("III")
+                    .pattern(" SI")
+                    .pattern("S I")
+                    .define('S',Items.STICK)
+                    .define('I',entry.getFifth().get())
+                    .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))
+                    .save(pWriter);
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SOFT_HAMMER_ITEMGEN_AUTOGEN){
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,entry.getFourth().get())
+                    .pattern(" II")
+                    .pattern(" SI")
+                    .pattern("S I")
                     .define('S',Items.STICK)
                     .define('I',entry.getFifth().get())
                     .unlockedBy(getHasName(entry.getFourth().get()),has(entry.getFourth().get()))

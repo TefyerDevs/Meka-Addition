@@ -41,6 +41,30 @@ public class CreativeModTabRegistry {
                                 for(ItemRegistry.Tuple<String,String, String, RegistryObject<Item>, RegistryObject<Item>> entry : ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
                                     output.accept(entry.Fourth.get());
                                 }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SAW_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WIRE_CUTTER_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.MOARTER_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WRENCH_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.KNIFE_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SKREW_DRIVER_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.FILE_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
+                                for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SOFT_HAMMER_ITEMGEN_AUTOGEN){
+                                    output.accept(entry.Fourth.get());
+                                }
                             })
                             .build());
 

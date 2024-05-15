@@ -29,6 +29,31 @@ public class ItemModelGenerator extends ItemModelProvider {
         for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.HAMMER_ITEMGEN_AUTOGEN){
             huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
         }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SAW_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WIRE_CUTTER_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond());
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.MOARTER_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond());
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.WRENCH_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.KNIFE_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SKREW_DRIVER_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.FILE_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+        for(ItemRegistry.Tuple<String, String,String, RegistryObject<Item>, RegistryObject<Item>> entry: ItemRegistry.SOFT_HAMMER_ITEMGEN_AUTOGEN){
+            huedhandheldItem(entry.getFourth(),entry.getSecond(),"minecraft:item/stick");
+        }
+
         for (BlockRegistry.Tuple<String, String,RegistryObject<Block>> entry: BlockRegistry.ORE_AUTOGEN){
             simpleBlockItem(entry.getThird(),entry.Second);
         }
@@ -64,7 +89,12 @@ public class ItemModelGenerator extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer1",
                 new ResourceLocation(MekaAddition.MODID,"item/" + data)).texture("layer0",
-                new ResourceLocation(data2)).element().end();
+                new ResourceLocation(data2));
+    }
+    private ItemModelBuilder huedhandheldItem(RegistryObject<Item> item,String data) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(MekaAddition.MODID,"item/" + data));
     }
 
 }

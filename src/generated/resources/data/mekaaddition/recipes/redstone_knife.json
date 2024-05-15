@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "mekaaddition:redstone_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " II",
+    " I ",
+    "S  "
+  ],
+  "result": {
+    "item": "mekaaddition:redstone_knife"
+  },
+  "show_notification": true
+}
